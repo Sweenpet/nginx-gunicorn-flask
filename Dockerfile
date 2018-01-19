@@ -1,12 +1,12 @@
-# nginx-gunicorn-flask
+# wsgi-python-demo
 
-FROM ubuntu:12.04
-MAINTAINER Daniel Riti <dmriti@gmail.com>
+FROM ubuntu:xenial
+MAINTAINER Peter Sweeney <sweenepe@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get install -y python python-pip python-virtualenv nginx gunicorn supervisor
+RUN apt-get install -y python-pip python-virtualenv nginx gunicorn supervisor vim
 
 # Setup flask application
 RUN mkdir -p /deploy/app
